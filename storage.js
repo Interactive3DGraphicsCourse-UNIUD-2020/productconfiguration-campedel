@@ -62,7 +62,7 @@ function applyMaterialIrra(diffuseMapPar, specularMapPar, roughnessMapPar, norma
 
 // applicazione il textureCube e Vertex/Fragment shader in base alla situazione
 function applyShaderUniforms(diffuseMapPar, specularMapPar, roughnessMapPar, normalMapPar, textureCube){
-    if(diffuseMapPar == diffuseMapFabric || diffuseMapPar == diffuseMapGranite){
+    if(diffuseMapPar == diffuseMapFabric){
         textureCube = textureCubeDTIrra;
         vs = vsNoRefle; fs = fsNoRefle;
         return applyMaterialIrra(diffuseMapPar, specularMapPar, roughnessMapPar, normalMapPar, textureCube);
